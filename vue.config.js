@@ -7,7 +7,7 @@ module.exports = {
             "provider": "github",
             "private": true,
             "owner": "coollogin",
-            "repo": "VosK",
+            "repo": "vosk",
             "token": "1886a65e1856b824a6e73c91567b87d3a8414085",
             "releaseType": "draft"
           }

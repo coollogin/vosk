@@ -21,7 +21,7 @@ let win
 
 let updater = {}
 updater.clicked = false
-// autoUpdater.autoDownload = false
+autoUpdater.autoDownload = false
 
 // Scheme must be registered before the app is ready
 protocol.registerSchemesAsPrivileged([{ scheme: 'app', privileges: { secure: true, standard: true } }])
