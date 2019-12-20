@@ -5,7 +5,12 @@ import store from './store/store'
 import 'materialize-css'
 import 'materialize-css/dist/css/materialize.css'
 
-import firebase from 'firebase'
+// import firebase from 'firebase'
+import firebase from '@firebase/app'
+import 'firebase/app'
+import 'firebase/firestore'
+
+// import 'firebase/auth'
 
 let config = {
   apiKey: 'AIzaSyAL5kT2HV1yc94JZ1FBbFepdBsr89iF3NA',
@@ -26,7 +31,6 @@ const db = firebaseApp.firestore()
 // })
 
 Vue.$db = db
-
 Vue.config.productionTip = false
 
 new Vue({

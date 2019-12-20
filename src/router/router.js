@@ -66,10 +66,10 @@ const router = new VueRouter({
 
 router.beforeEach((to, from, next) => {
   if (store.getters.getAuthorizationStatus || to.path === '/login') {
-    // if (!store.getters.getProcessing) {
-    store.commit('updateSearchKey', '') // .then(() => next())
-    next()
-    // }
+    if (!store.getters.getProcessing) {
+      store.commit('updateSearchKey', '') // .then(() => next())
+      next()
+    }
   } else {
     next('/login')
   }

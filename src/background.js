@@ -21,7 +21,7 @@ let win
 
 let updater = {}
 updater.clicked = false
-autoUpdater.autoDownload = false
+//autoUpdater.autoDownload = false
 
 // Scheme must be registered before the app is ready
 protocol.registerSchemesAsPrivileged([{ scheme: 'app', privileges: { secure: true, standard: true } }])
@@ -107,6 +107,20 @@ if (isDevelopment) {
     })
   }
 }
+
+// app.on('ready', (evt, token) => {
+//   const data = {
+//     'provider': 'github',
+//     'owner':    'coollogin',
+//     'repo':     'vosk',
+//     'token':    token
+//   };
+//   updater.setFeedURL(data);
+//   updater.autoDownload = false;
+//   updater.checkForUpdates();
+// });
+
+
 
 // Слушаем события других окон
 ipcMain.on('update-available', (event) => {

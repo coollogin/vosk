@@ -72,7 +72,7 @@ export default {
           // console.log(vkr)
           // M.toast({ html: 'Вы авторизованы', classes: 'freen' })
           await this.$store.commit('SETUSERINFO', {
-            id: vk.session.user_id,
+            user_id: vk.session.user_id,
             first_name: vk.session.first_name,
             last_name: vk.session.last_name,
             username: vk.session.username,

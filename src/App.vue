@@ -80,7 +80,7 @@ export default {
   },
   computed:
     mapGetters(
-      [ 'getAuthorizationStatus', 'getGroupsLength' ]
+      [ 'getAuthorizationStatus', 'getGroupsLength', 'getUserInfo' ]
     ),
   methods: {
     ...mapMutations(['UPDATEGROUPS', 'UPDATEPOSTS', 'SETUSERINFO', 'SET_PROCESSING']),
@@ -89,6 +89,7 @@ export default {
     }
   },
   async mounted () {
+    console.log(this.getUserInfo.user_id)
     // await this.$store.dispatch('fetchGroupsfromBD')
     // await this.$store.dispatch('addStatsToBD')
     await this.$store.dispatch('fetchFavoritesPostsfromBD')
@@ -154,7 +155,7 @@ export default {
               // M.toast({ html: 'Проскачили =)', classes: 'green' })
               console.log(vk.session)
               await this.$store.commit('SETUSERINFO', {
-                id: vk.session.user_id,
+                user_id: vk.session.user_id,
                 first_name: vk.session.first_name,
                 last_name: vk.session.last_name,
                 username: vk.session.username,
