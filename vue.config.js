@@ -8,7 +8,7 @@ module.exports = {
             "private": true,
             "owner": "coollogin",
             "repo": "VosK",
-            "token": "f5bbe92c15cb500d2f8dfd99695944e6897c23f4",
+            "token": "1886a65e1856b824a6e73c91567b87d3a8414085",
             "releaseType": "draft"
           }
         ]
