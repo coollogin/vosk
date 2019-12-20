@@ -1,0 +1,52 @@
+{
+  "name": "VosK",
+  "version": "2.0.1",
+  "private": true,
+  "description": "App for search and sort posts in groups VK",
+  "author": "Kulagin Sergey <houseofcool@ya.ru>",
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "electron:build": "vue-cli-service electron:build",
+    "electron:serve": "vue-cli-service electron:serve",
+    "postinstall": "electron-builder install-app-deps",
+    "postuninstall": "electron-builder install-app-deps",
+    "electron:generate-icons": "electron-icon-builder --input=./public/icon.png --output=build --flatten"
+  },
+  "main": "background.js",
+  "dependencies": {
+    "chart.js": "^2.9.3",
+    "core-js": "^3.3.2",
+    "easyvk": "^2.5.11",
+    "electron": "^6.0.0", 
+    "electron-updater": "^4.2.0",
+    "file-system": "^2.2.2",
+    "firebase": "^7.5.2",
+    "materialize-css": "^1.0.0-rc.2",
+    "mongodb": "^3.3.5",
+    "mongoose": "^5.7.12",
+    "vue": "^2.6.10",
+    "vue-chartjs": "^3.5.0",
+    "vue-router": "^3.1.3",
+    "vuex": "^3.0.1"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^4.0.0",
+    "@vue/cli-plugin-eslint": "^4.0.0",
+    "@vue/cli-plugin-router": "^4.0.0",
+    "@vue/cli-plugin-vuex": "^4.0.0",
+    "@vue/cli-service": "^4.0.0",
+    "@vue/eslint-config-standard": "^4.0.0",
+    "babel-eslint": "^10.0.3",
+    "electron": "^6.0.0",
+    "electron-icon-builder": "^1.0.1",
+    "eslint": "^5.16.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "node-sass": "^4.12.0",
+    "sass-loader": "^8.0.0",
+    "vue-cli-plugin-electron-builder": "^1.4.2",
+    "vue-template-compiler": "^2.6.10"
+  },
+  "license": null
+}
